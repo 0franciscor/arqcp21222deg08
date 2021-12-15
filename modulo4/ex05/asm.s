@@ -6,7 +6,7 @@ inc_and_square:
 	# v2 em %esi
 
 	movq (%rdi), %rcx
-	addl $1 , %ecx
+	addq $1 , %rcx
 	movq %rcx , (%rdi)
 	
 	
