@@ -5,7 +5,6 @@ incr:
 	movswl (%rdi), %r8d
 	movl %r8d, -16(%rbp) # x em 2 lugar na stack como variavel local
 
-	movl -16(%rbp), %r8d
 	movl %r8d, -24(%rbp) # y em 3 lugar na stack como variavel local
 
 	movsbl %sil, %r8d
