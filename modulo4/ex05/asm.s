@@ -5,9 +5,9 @@ inc_and_square:
     # *v1 em %edi
 	# v2 em %esi
 
-	movl (%rdi), %ecx
-	addl $1 , %ecx
-	movl %ecx , (%rdi)
+	movl (%rdi), %r8d
+	addl $1 , %r8d
+	movl %r8d , (%rdi)
 	
 	jmp square
 

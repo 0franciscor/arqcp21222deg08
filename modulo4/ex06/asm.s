@@ -4,7 +4,7 @@ test_equal:
     # a em %rdi
 	# b em %rsi
 	movl $0, %eax
-	movl $0, %ecx
+	movl $0, %r8d
 	jmp loop
 
 loop:

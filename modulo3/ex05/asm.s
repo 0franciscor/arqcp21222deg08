@@ -22,7 +22,7 @@ loop:
     cmpl %edx, %r8d
     jl end
     
-    addl %ecx, %r9d
+    addl %r8d, %r9d
     movq %rcx, (%rax)
 
     addq $4, %rax

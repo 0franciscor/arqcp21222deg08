@@ -20,7 +20,7 @@ loop:
     cmpl %r8d, %r9d
     je end
 
-    movl $0, %ecx
+    movl $0, %r8d
     movw (%rax), %cx
 
     cmpw $100, %cx

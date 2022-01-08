@@ -7,7 +7,7 @@
 encrypt:
     movl $0, %eax # limpeza de registo para receber pointer
     movl $0, %esi # limpeza de registo esi para registar numero de alteracoes
-    movl $0, %ecx # limpeza de registo para acomodar char
+    movl $0, %r8d # limpeza de registo para acomodar char
 
     movq ptr1(%rip), %rax # passagem do apontador char para rax
 

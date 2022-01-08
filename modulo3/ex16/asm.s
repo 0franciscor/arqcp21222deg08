@@ -8,7 +8,7 @@
 
 swap:
     movl $0, %eax
-    movl $0, %ecx
+    movl $0, %r8d
 
     movq ptr1(%rip), %rax
     movq ptr2(%rip), %rcx

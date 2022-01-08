@@ -2,7 +2,7 @@
 	.global sum_n
 sum_n:
 	movl $0, %eax
-	movl $1, %ecx
+	movl $1, %r8d
 
 	cmpl %eax, %edi
 	jle end
@@ -10,12 +10,12 @@ sum_n:
 	jmp loop
 
 loop:
-	addl %ecx, %eax
+	addl %r8d, %eax
 
-	cmpl %ecx, %edi
+	cmpl %r8d, %edi
 	je end
 
-	incl %ecx
+	incl %r8d
 
 	jmp loop
 end:

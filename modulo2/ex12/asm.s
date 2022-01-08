@@ -9,18 +9,18 @@ isMultiple:
 
     movl $0, %edx   # Clean edx in order to allow the division to be performed
 
-    movl B(%rip), %ecx
+    movl B(%rip), %r8d
     movl A(%rip), %eax
 
-    cmpl $0, %ecx   # compares 0 to op2 (cannot divide by 0)
+    cmpl $0, %r8d   # compares 0 to op2 (cannot divide by 0)
 	je conditionZero
 	
-    idivl %ecx
+    idivl %r8d
     
     movl $0, %eax 
-    movl $0, %ecx
+    movl $0, %r8d
 
-    cmpl %edx, %ecx
+    cmpl %edx, %r8d
     je turnPositive
 
     jmp end

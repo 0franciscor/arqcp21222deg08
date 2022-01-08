@@ -7,8 +7,8 @@
 
 test_flags:
     movl op1(%rip), %eax
-    movl op2(%rip), %ecx
-    addl %ecx, %eax
+    movl op2(%rip), %r8d
+    addl %r8d, %eax
 
     jc carry_detected
     jo overflow_detected

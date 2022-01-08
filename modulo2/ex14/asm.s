@@ -14,9 +14,9 @@ height:
 
 getArea:
     movl base(%rip), %eax
-    movl height(%rip), %ecx
-    mull %ecx
-    movl $CONST, %ecx
-    divl %ecx
+    movl height(%rip), %r8d
+    mull %r8d
+    movl $CONST, %r8d
+    divl %r8d
     ret
 

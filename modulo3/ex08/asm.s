@@ -9,7 +9,7 @@
 test_even:
     movl $0, %eax
     movl $0, %edx
-    movl $0, %ecx
+    movl $0, %r8d
 
     movq even(%rip), %rax 
 
@@ -39,7 +39,7 @@ vec_sum_even:
     movl $0, %r8d
     movq ptrvec(%rip), %r8 # passagem do conteudo do pointer para r8
 
-    movl $0, %ecx # limpeza do registo que armazenará a soma
+    movl $0, %r8d # limpeza do registo que armazenará a soma
 
     movl $0, %edi
     movq $2, %rdi # divisor para edi
@@ -68,7 +68,7 @@ loop:
 
 
 evenNum:
-    addl (%r8), %ecx
+    addl (%r8), %r8d
     jmp nextIteration
 
 nextIteration:
@@ -77,5 +77,5 @@ nextIteration:
     jmp loop
 
 end:
-    movl %ecx, %eax
+    movl %r8d, %eax
     ret

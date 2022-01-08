@@ -6,17 +6,17 @@
     .global vec_avg
 vec_avg:
 
-    movswl num(%rip), %ecx
+    movswl num(%rip), %r8d
     pushq %rcx
     call vec_sum
    	popq %rcx
    	movl $0, %edx
-	movswl num(%rip), %ecx
-	cmpl $0, %ecx
+	movswl num(%rip), %r8d
+	cmpl $0, %r8d
 	je divisor_zero
 	
 	cdq
-	idivl %ecx
+	idivl %r8d
 	jmp  end
 	
 	divisor_zero:

@@ -9,19 +9,19 @@
 
 compute:
     movl A(%rip), %eax
-    movl B(%rip), %ecx
-    imull %ecx, %eax
+    movl B(%rip), %r8d
+    imull %r8d, %eax
 
-    movl C(%rip), %ecx
-    addl %ecx,%eax
+    movl C(%rip), %r8d
+    addl %r8d,%eax
 
-    movl D(%rip), %ecx
+    movl D(%rip), %r8d
 
     je jump_if_equals
 
     movl $0, %edx
     cdq
-    idivl %ecx
+    idivl %r8d
     jmp end
 jump_if_equals:
     movl $0, %eax

@@ -8,7 +8,7 @@
 
 str_cat:
     movl $0, %eax # limpeza de rax
-    movl $0, %ecx # limpeza de rcx
+    movl $0, %r8d # limpeza de rcx
     movl $0, %edx # limpeza de rdx
 
     movq ptr1(%rip), %rax # passagem da primeira string para registo

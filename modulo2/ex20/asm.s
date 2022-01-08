@@ -20,7 +20,7 @@ oddPositiveVar:
 
 check_num:
     movl num(%rip), %eax # mover o numero para %eax  
-    movl num(%rip), %ecx # mover o numero para %ecx para depois comparar
+    movl num(%rip), %r8d # mover o numero para %r8d para depois comparar
     movq $div, %rdi # mover o divisor para o devido registo
 
     movq $0, %rdx
@@ -35,13 +35,13 @@ check_num:
 
 even:
     movl $0, %eax
-    cmpl $0, %ecx
+    cmpl $0, %r8d
     js evenNegative
     jns evenPositive 
 
 odd:
     movl $0, %eax
-    cmpl $0, %ecx
+    cmpl $0, %r8d
     js oddNegative
     jns oddPositive 
 
