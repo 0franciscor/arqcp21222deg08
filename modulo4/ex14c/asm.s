@@ -1,5 +1,18 @@
 .section .text
-	.global activate_bit
+	.global activate_2bits
+
+activate_2bits:
+	pushq %rsi
+	call activate_bit
+	popq %rsi
+
+	movl $31, %eax
+	subl %esi, %eax
+	movl %eax, %esi
+
+	call activate_bit
+
+	ret
 
 activate_bit:
 	movl (%rdi), %eax # mover parametro para registo
