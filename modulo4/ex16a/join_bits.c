@@ -4,9 +4,8 @@ int join_bits(int a, int b, int pos){
     int tempA = a;
     int tempB = b;
 
-    for (int i = 0; i <= pos; i++){
+    for (int i = 0; i <= pos; i++)
         maskA = maskA + (1 << i);
-    }
 
     maskB ^= maskA;
 
