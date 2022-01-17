@@ -1,7 +1,6 @@
 .section .text
 	.global mixed_sum
 
-
 mixed_sum:
 
 	movl $0, %ecx
